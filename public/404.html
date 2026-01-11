@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>404 - Redirecting…</title>
+    <script>
+      // Redirect unknown paths on GitHub Pages to the hash-based route
+      (function () {
+        var pathname = window.location.pathname;
+        var base = '/ChatApp';
+        var path = pathname.indexOf(base) === 0 ? pathname.slice(base.length) : pathname;
+        // Redirect to the same path using hash so the SPA router can handle it
+        window.location.replace(base + '/#' + (path || '/'));
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
